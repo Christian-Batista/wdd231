@@ -1,0 +1,86 @@
+@media screen and (min-width: 768px) {
+    .header-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.2rem 2.5rem;
+        background-color: #3182ce;
+    }
+    
+    nav {
+        padding: 0 2.5rem;
+        background-color: #2c5282;
+    }
+    
+    #hamburger-btn {
+        display: none;
+    }
+    
+    #primary-nav {
+        display: flex;
+        position: static;
+        justify-content: space-around;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    #primary-nav li {
+        width: auto;
+    }
+    
+    #primary-nav a {
+        padding: 1.2rem 1.8rem;
+        color: #ebf8ff;
+        font-size: 1.1rem;
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+    
+    main {
+        padding: 2.5rem;
+        background-color: #f7fafc;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    /* Course grid adjustments */
+    .courses-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.8rem;
+    }
+    
+    footer {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+    }
+    
+    footer img {
+        position: static;
+        margin-top: 1rem;
+        width: 50px;
+    }
+}
+
+/* Extra large screens */
+@media screen and (min-width: 1024px) {
+    .header-content {
+        padding: 1.8rem 3rem;
+    }
+    
+    .profile-photo {
+        width: 110px;
+        height: 130px;
+        border: 3px solid #e2e8f0;
+    }
+    
+    .name {
+        font-size: 2.4rem;
+        color: #ffffff;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    main {
+        padding: 3rem 4rem;
+    }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="W01 Assignment: Course Home Page, this is the home page for my WDD231 course.">
+        <meta name="author" content="Christian Batista">
+        <title>WDD231 Portfolio | Christian Batista</title>
+
+        <!-- Google Fonts links-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
+        <!-- CSS Files links-->
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <link rel="stylesheet" href="styles/larger.css">
+        
+        <!-- JavaScript Files -->
+        <script src="scripts/getDates.js" defer></script>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/courses.js"></script>
+    </head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/christian-batista.jpg" alt="Christian Batista profile photo" class="profile-photo">
+            <span class="name">Christian A. Batista</span>
+        </div>
+        <nav>
+            <button id="hamburger-btn" aria-label="Toggle Menu">
+                <span class="hamburger-icon">☰</span>
+                <span class="close-icon">✕</span>
+            </button>
+            <ul id="primary-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="chamber/">Chamber</a></li>
+                <li><a href="final/">Final</a></li>
+                <li><a href="https://github.com/Christian-Batista" target="_blank">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/christian-batista-0bb978206/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Home</h1>
+        
+        <div class="content-grid">
+            <section class="course-work">
+                <h2>Course Work</h2>
+                <ul>
+                    <li>Assignment 1: Personal Portfolio 💼</li>
+                    <li>Assignment 2: Chamber of Commerce 💳</li>
+                    <li>Assignment 3: Final Project 🧑🏻‍💻</li>
+                </ul>
+            </section>
+            
+            <section class="location">
+                <h2>Santo Domingo, Dominican Republic</h2>
+                <figure>
+                    <img src="images/la-vega.jpg" alt="Your Location Image" class="location-image">
+                    <figcaption>La Vega - Dominican Republic</figcaption>
+                </figure>
+            </section>
+        </div>
+        
+        <section class="certificate-section">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="cse">CSE</button>
+                <button class="filter-btn" data-filter="wdd">WDD</button>
+            </div>
+            
+            <div class="courses-grid" id="courses-container">
+               <!-- I'll add the courses dynamically here using JavaScript. See scripts/courses.js' -->
+            </div>
+            
+            <div class="credits-info">
+                <p>Total Credits: <span id="total-credits">0</span></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p><span id="currentYear"></span> 🏝️ Christian Batista 🏝️ La Vega, Dominican Republic</p>
+            <p id="lastModified"></p>
+            <img src="images/dominican-flag.webp" alt="">
+        </div>
+    </footer>
+</body>
+</html>
