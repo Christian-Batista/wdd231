@@ -61,8 +61,8 @@ function displayMembers(members) {
             default: membershipLevel = 'Member'; break;
         }
         
-        const imagePath = `/chamber/images/members/${member.image}`;
-        const defaultImage = '/chamber/images/members/default.jpg';
+        const imagePath = `wdd231/chamber/images/members/${member.image}`;
+        const defaultImage = 'wdd231/chamber/images/members/default.jpg';
         
         memberElement.innerHTML = `
             <img src="${imagePath}" alt="${member.name}" loading="lazy"
