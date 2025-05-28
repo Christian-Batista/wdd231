@@ -1,0 +1,116 @@
+h1 {
+	background-color: var(--neutro-color);
+	color: #fff;
+	padding: 1rem;
+	text-align: center;
+}
+
+body {
+	background-color: var(--background-color);
+}
+
+main {
+	margin: 0 auto;
+	padding: 0.5rem;
+	max-width: 800px;
+	background-color: var(--background-color);
+	font-family: Acme, Arial, sans-serif;
+}
+
+.menu {
+	margin: 1rem auto;
+	border: 1px solid rgb(0 0 0 / 0.1);
+	padding: 0.5rem;
+	background-color: #333;
+	text-align: center;
+}
+
+.menu button {
+	padding: 1rem;
+	font-weight: 700;
+}
+
+article  h1{
+	display: none;
+}
+
+section {
+	border: 1px solid rgb(0 0 0 / 0.1);
+	padding: 0.5rem;
+	background-color: #ddd;
+}
+
+section .members-title {
+	display: none;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 10px;
+	align-items: center;
+}
+
+.grid section {
+	text-align: center;
+}
+
+.grid img {
+	width: 50%;
+    height: auto;
+    object-fit: cover;
+	border: 1px solid #fff;
+	box-shadow: 0 0 1rem #555;
+
+}
+
+.grid section > * {
+	margin: 0.1rem;
+}
+
+.grid h3 {
+	font-size: 1.2rem;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+}
+
+.list section {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	margin: 0;
+	padding: 0.25rem;
+}
+
+.list section > * {
+	margin: 0 1rem;
+}
+
+.list section img {
+	display: none; /* smaller viewports only */
+}
+
+.list section h3 {
+	font-size: 1rem;
+}
+
+.list section:nth-child(even) {
+	background-color: #bbb;
+}
+
+section h3 {
+	font-size: 1.5rem;
+}
+
+section a {
+	font-family: Arial, sans-serif;
+	font-size: 0.85rem;
+	color: navy;
+}
+
+img {
+	width: auto;
+	height: 75px;
+}

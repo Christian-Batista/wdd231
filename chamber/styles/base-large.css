@@ -1,0 +1,27 @@
+@media (min-width: 1024px) {
+    body {
+        padding: 0 1rem;
+    }
+
+    .hamburger-btn {
+        display: none;
+    }
+
+    nav {
+        display: block;
+        position: static;
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .header-container {
+        padding: 1rem 1rem;
+    }
+}

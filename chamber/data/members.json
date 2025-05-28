@@ -1,0 +1,65 @@
+[
+    {
+      "name": "Super Colmado Lorenzo.",
+      "address": "C. Madre Asunción, La Vega 41000",
+      "phone": "(809) 573 3047",
+      "website": "https://techsolutions.com",
+      "image": "super-lorenzo.jpeg",
+      "membership": 3,
+      "description": "Empresa dedicada a la venta y distribución de provisiones frescas."
+    },
+    {
+      "name": "Auto Mayella",
+      "address": "6FP8+4R9, La Vega 41000",
+      "phone": "(809) 573 3955",
+      "website": "https://automayella.com.do",
+      "image": "auto-mayella.png",
+      "membership": 2,
+      "description": "El Dealer de los Dominicanos. Todas las marcas en un sólo lugar!, todo lo que necesite en vehiculos somo su solucion."
+    },
+    {
+      "name": "Microvision canal 10",
+      "address": "6F9H+3R7, La Vega 41000",
+      "phone": "(809) 573 3746",
+      "website": "https://microvision.com.do",
+      "image": "Microvision-Canal-101.jpg",
+      "membership": 3,
+      "description": "Ser el canal de televisión regional con la mejor tecnología, ofreciendo mejores programas y eventos de interés local."
+    },
+    {
+      "name": "Telecable Central",
+      "address": "La Vega 41000",
+      "phone": "(809) 573 7676",
+      "website": "https://telecablecentral.com",
+      "image": "telecable-central.png",
+      "membership": 1,
+      "description": "Somos una empresa dedicada a la difusión y distribución de múltiple servicios de telecomunicaciones."
+    },
+    {
+      "name": "Vocatus",
+      "address": "Calle Caonabo Lora # 1, La Vega.",
+      "phone": "(809) 242 3921",
+      "website": "https://vocatus.com.do",
+      "image": "vocatus-image.jpg",
+      "membership": 2,
+      "description": "Somos una empresa dedicada a la venta de alcoholes y cervezas. ofreciendo siempre la mejor calidad y los mejores precios."
+    },
+    {
+      "name": "La Super Reina",
+      "address": "C/Padre Adolfo Esq. Duverge #39 La Vega.",
+      "phone": "(809) 242 1566",
+      "website": "https://www.instagram.com/lareinalavega/?hl=es",
+      "image": "la-reina.png",
+      "membership": 1,
+      "description": "Somos una tianda dedicada a la venta de productos para la belleza."
+    },
+    {
+      "name": "Supermercado La Esquina Famosa",
+      "address": "C/Juan Rodríguez No.19 Esquina Juana Dolores, La Vega",
+      "phone": "(809) 573 3594",
+      "website": "https://mainstreetcafe.com",
+      "image": "la-esquina-famosa.jpeg",
+      "membership": 2,
+      "description": "Somos una empresa dedicada a la venta de productos de supermercado."
+    }
+  ]

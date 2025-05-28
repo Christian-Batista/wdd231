@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://sync-logs-server.test/dashboard -->
+<html lang="en" class="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="bAPBh7Ialca51AhogSdXulUtY8obYHNW6bEpld7v">
+
+        <title>Laravel</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net/">
+        <link href="./Laravel_files/css" rel="stylesheet">
+
+        <!-- Scripts -->
+        <script type="module" src="./Laravel_files/client" data-navigate-track="reload"></script><link rel="stylesheet" href="./Laravel_files/app.css" data-navigate-track="reload"><script type="module" src="./Laravel_files/app.js" data-navigate-track="reload"></script>        <!-- Livewire Styles --><style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}</style>
+    <style>/* Make clicks pass-through */
+
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: var(--livewire-progress-bar-color, #29d);
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    /* Fancy blur effect */
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px var(--livewire-progress-bar-color, #29d), 0 0 5px var(--livewire-progress-bar-color, #29d);
+      opacity: 1.0;
+
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+          -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    /* Remove these to get rid of the spinner */
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: var(--livewire-progress-bar-color, #29d);
+      border-left-color: var(--livewire-progress-bar-color, #29d);
+      border-radius: 50%;
+
+      -webkit-animation: nprogress-spinner 400ms linear infinite;
+              animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @-webkit-keyframes nprogress-spinner {
+      0%   { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style></head>
+    <body class="font-sans antialiased bg-gray-100 dark:bg-gray-900 h-screen overflow-hidden">
+        <div class="flex h-full">
+            
+            <aside class="bg-gray-800 w-16 min-h-screen flex flex-col items-center py-4 space-y-8 relative">
+    <!-- Logo arriba -->
+    <div class="group relative">
+        <a href="https://sync-logs-server.test/">
+            <img src="./Laravel_files/midas-red-logo-min.png" alt="midas red logo" class="w-3xs object-contain mx-auto">        </a>
+        <span class="absolute left-full ml-3 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50">
+            Inicio
+        </span>
+    </div>
+
+    <!-- Menú central -->
+    <div class="flex flex-col items-center space-y-6 flex-grow">
+        <!-- Ícono Dashboard -->
+        <div class="group relative">
+            <a href="https://sync-logs-server.test/" class="p-2 rounded-lg hover:bg-gray-700 focus:outline-none block">
+                <svg class="w-8 h-8 text-gray-500 hover:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"></path>
+</svg>            </a>
+            <span class="absolute left-full ml-3 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50">
+                Dashboard
+            </span>
+        </div>
+    </div>
+
+    <!-- Configuración -->
+    <div class="relative"> <!-- Eliminamos group de aquí -->
+        <button id="dropdown-button" class="p-2 rounded-lg hover:bg-gray-700 focus:outline-none group">
+            <svg class="w-8 h-8 text-gray-300 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M10 3.75a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM17.25 4.5a.75.75 0 0 0 0-1.5h-5.5a.75.75 0 0 0 0 1.5h5.5ZM5 3.75a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5a.75.75 0 0 1 .75.75ZM4.25 17a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5h1.5ZM17.25 17a.75.75 0 0 0 0-1.5h-5.5a.75.75 0 0 0 0 1.5h5.5ZM9 10a.75.75 0 0 1-.75.75h-5.5a.75.75 0 0 1 0-1.5h5.5A.75.75 0 0 1 9 10ZM17.25 10.75a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5h1.5ZM14 10a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM10 16.25a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z"></path>
+</svg>            <span class="absolute left-full ml-3 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50">
+                Configuración
+            </span>
+        </button>
+        
+        <!-- Menú desplegable - posición corregida -->
+        <div id="dropdown-menu" class="hidden absolute left-0 bottom-full mb-2 w-36 bg-gray-700 rounded-lg shadow-lg z-40">
+            <a href="https://sync-logs-server.test/register" class="block px-4 py-2 text-gray-300 hover:bg-gray-600 hover:text-white">
+                Crear usuario
+            </a>
+            <a href="https://sync-logs-server.test/dashboard#" class="block px-4 py-2 text-gray-300 hover:bg-gray-600 hover:text-white">
+                Configuración
+            </a>
+            <form method="POST" action="https://sync-logs-server.test/logout">
+                <input type="hidden" name="_token" value="bAPBh7Ialca51AhogSdXulUtY8obYHNW6bEpld7v" autocomplete="off">                <button type="submit" class="block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-600 hover:text-white">
+                    Cerrar sesión
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.getElementById("dropdown-button");
+            const menu = document.getElementById("dropdown-menu");
+            
+            function toggleDropdown() {
+                menu.classList.toggle("hidden");
+            }
+            
+            button.addEventListener('click', function(e) {
+                e.stopPropagation();
+                toggleDropdown();
+            });
+            
+            // Cerrar al hacer clic fuera
+            document.addEventListener("click", function(e) {
+                if (!menu.contains(e.target) && !button.contains(e.target)) {
+                    menu.classList.add("hidden");
+                }
+            });
+            
+            // Prevenir que el clic en el menú lo cierre
+            menu.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+    </script>
+</aside>
+            <div class="flex-1 flex flex-col h-full">
+                
+                <main class="flex-1 overflow-hidden">
+                    <div class="h-screen flex flex-col">
+        <div wire:snapshot="{&quot;data&quot;:{&quot;logs&quot;:[[[{&quot;id&quot;:&quot;8dfd4006-0672-418e-853d-f0cefc8523cd&quot;,&quot;timestamp&quot;:&quot;2025-03-10 10:38:50&quot;,&quot;service&quot;:&quot;api5-prod01&quot;,&quot;level&quot;:&quot;critical&quot;,&quot;message&quot;:&quot;Error de conexi\u00f3n a base de datos&quot;,&quot;context&quot;:[{&quot;method&quot;:&quot;GET&quot;,&quot;endpoint&quot;:&quot;api\/transactions&quot;,&quot;error&quot;:[{&quot;cod&quot;:&quot;500&quot;,&quot;message&quot;:&quot;Database connection failed&quot;,&quot;exception&quot;:&quot;PDOException: SQLSTATE[HY000] [2002] Connection refused&quot;},{&quot;s&quot;:&quot;arr&quot;}],&quot;server&quot;:[{&quot;host&quot;:&quot;db01.midasred.internal&quot;,&quot;port&quot;:3306},{&quot;s&quot;:&quot;arr&quot;}]},{&quot;s&quot;:&quot;arr&quot;}],&quot;received_at&quot;:&quot;2025-05-27 05:37:23&quot;},{&quot;s&quot;:&quot;arr&quot;}],[{&quot;id&quot;:&quot;85c503f0-cd72-4aa9-8b94-300db031925a&quot;,&quot;timestamp&quot;:&quot;2025-03-10 10:36:05&quot;,&quot;service&quot;:&quot;MidasPos Beta-Test&quot;,&quot;level&quot;:&quot;info&quot;,&quot;message&quot;:&quot;Actualizaci\u00f3n de datos de comercio&quot;,&quot;context&quot;:[{&quot;method&quot;:&quot;PUT&quot;,&quot;url&quot;:&quot;api\/v1\/commerce\/14112&quot;,&quot;input&quot;:[{&quot;name&quot;:&quot;Supermercado Nuevo&quot;,&quot;address&quot;:&quot;Calle Principal 123&quot;},{&quot;s&quot;:&quot;arr&quot;}],&quot;response&quot;:[{&quot;cod&quot;:&quot;00&quot;,&quot;message&quot;:&quot;Comercio actualizado&quot;},{&quot;s&quot;:&quot;arr&quot;}]},{&quot;s&quot;:&quot;arr&quot;}],&quot;received_at&quot;:&quot;2025-05-27 05:37:23&quot;},{&quot;s&quot;:&quot;arr&quot;}],[{&quot;id&quot;:&quot;f23eca31-4df6-4807-9965-11196cd9f096&quot;,&quot;timestamp&quot;:&quot;2025-03-10 10:33:20&quot;,&quot;service&quot;:&quot;MidasPos Beta-Test&quot;,&quot;level&quot;:&quot;info&quot;,&quot;message&quot;:&quot;Transacci\u00f3n reversible detectada&quot;,&quot;context&quot;:[{&quot;method&quot;:&quot;GET&quot;,&quot;url&quot;:&quot;api\/v1\/transactions&quot;,&quot;parameters&quot;:[{&quot;date&quot;:&quot;2025-03-10&quot;,&quot;limit&quot;:10},{&quot;s&quot;:&quot;arr&quot;}],&quot;response&quot;:[{&quot;transactions&quot;:[[[{&quot;auth_code&quot;:&quot;49175584&quot;,&quot;is_reversible&quot;:true,&quot;reverse_url&quot;:&quot;\/api\/topup\/reverse&quot;},{&quot;s&quot;:&quot;arr&quot;}]],{&quot;s&quot;:&quot;arr&quot;}]},{&quot;s&quot;:&quot;arr&quot;}]},{&quot;s&quot;:&quot;arr&quot;}],&quot;received_at&quot;:&quot;2025-05-27 05:37:23&quot;},{&quot;s&quot;:&quot;arr&quot;}],[{&quot;id&quot;:&quot;723326e2-7868-41c1-b00d-58b4916de8dd&quot;,&quot;timestamp&quot;:&quot;2025-03-10 10:30:45&quot;,&quot;service&quot;:&quot;api5-prod01&quot;,&quot;level&quot;:&quot;warning&quot;,&quot;message&quot;:&quot;L\u00edmite de tasa excedido&quot;,&quot;context&quot;:[{&quot;method&quot;:&quot;POST&quot;,&quot;endpoint&quot;:&quot;api\/data\/get_plans&quot;,&quot;input&quot;:[{&quot;provider&quot;:&quot;claro&quot;,&quot;subscription_number&quot;:&quot;8299876285&quot;},{&quot;s&quot;:&quot;arr&quot;}],&quot;error&quot;:[{&quot;cod&quot;:&quot;429&quot;,&quot;message&quot;:&quot;Too Many Requests&quot;},{&quot;s&quot;:&quot;arr&quot;}],&quot;rate_limit&quot;:&quot;10\/10&quot;},{&quot;s&quot;:&quot;arr&quot;}],&quot;received_at&quot;:&quot;2025-05-27 05:37:23&quot;},{&quot;s&quot;:&quot;arr&quot;}],[{&quot;id&quot;:&quot;fc903f6c-5267-43a9-a86a-09f5b499d9d1&quot;,&quot;timestamp&quot;:&quot;2025-03-10 10:28:12&quot;,&quot;service&quot;:&quot;MidasPos Beta-Test&quot;,&quot;level&quot;:&quot;info&quot;,&quot;message&quot;:&quot;Reimpresi\u00f3n de ticket solicitada&quot;,&quot;context&quot;:[{&quot;method&quot;:&quot;GET&quot;,&quot;url&quot;:&quot;api\/v1\/transactions\/reprint&quot;,&quot;parameters&quot;:[{&quot;transaction_id&quot;:&quot;1741548055203-8bdee9e6887a571c&quot;},{&quot;s&quot;:&quot;arr&quot;}],&quot;response&quot;:[{&quot;cod&quot;:&quot;00&quot;,&quot;pdf_url&quot;:&quot;https:\/\/storage.midasred.com\/tickets\/1741548055203.pdf&quot;},{&quot;s&quot;:&quot;arr&quot;}]},{&quot;s&quot;:&quot;arr&quot;}],&quot;received_at&quot;:&quot;2025-05-27 05:37:23&quot;},{&quot;s&quot;:&quot;arr&quot;}],[{&quot;id&quot;:&quot;b46ce2f8-27aa-41e1-b06b-40a49ab934fc&quot;,&quot;timestamp&quot;:&quot;2025-03-10 10:25:30&quot;,&quot;service&quot;:&quot;api5-prod01&quot;,&quot;level&quot;:&quot;error&quot;,&quot;message&quot;:&quot;Autenticaci\u00f3n fallida&quot;,&quot;context&quot;:[{&quot;method&quot;:&quot;POST&quot;,&quot;endpoint&quot;:&quot;api\/auth\/login&quot;,&quot;input&quot;:[{&quot;username&quot;:&quot;operador1&quot;,&quot;password&quot;:&quot;*******&quot;},{&quot;s&quot;:&quot;arr&quot;}],&quot;error&quot;:[{&quot;cod&quot;:&quot;401&quot;,&quot;message&quot;:&quot;Credenciales inv\u00e1lidas&quot;},{&quot;s&quot;:&quot;arr&quot;}],&quot;ip&quot;:&quot;201.229.162.204&quot;},{&quot;s&quot;:&quot;arr&quot;}],&quot;received_at&quot;:&quot;2025-05-27 05:37:23&quot;},{&quot;s&quot;:&quot;arr&quot;}],[{&quot;id&quot;:&quot;4c98b858-22b1-419e-a88e-49b140bb51ed&quot;,&quot;timestamp&quot;:&quot;2025-03-10 10:22:45&quot;,&quot;service&quot;:&quot;MidasPos Beta-Test&quot;,&quot;level&quot;:&quot;info&quot;,&quot;message&quot;:&quot;Consulta de tickets ganadores&quot;,&quot;context&quot;:[{&quot;method&quot;:&quot;GET&quot;,&quot;url&quot;:&quot;api\/v1\/lottery\/report\/tickets-winners&quot;,&quot;parameters&quot;:[{&quot;dateStart&quot;:&quot;2025-03-10&quot;,&quot;commerce_id&quot;:&quot;14112&quot;},{&quot;s&quot;:&quot;arr&quot;}],&quot;response&quot;:[{&quot;cod&quot;:&quot;00&quot;,&quot;awards&quot;:[[[{&quot;ticket&quot;:&quot;117055&quot;,&quot;prize&quot;:&quot;1000&quot;,&quot;winner&quot;:&quot;Juan P\u00e9rez&quot;},{&quot;s&quot;:&quot;arr&quot;}]],{&quot;s&quot;:&quot;arr&quot;}]},{&quot;s&quot;:&quot;arr&quot;}]},{&quot;s&quot;:&quot;arr&quot;}],&quot;received_at&quot;:&quot;2025-05-27 05:37:23&quot;},{&quot;s&quot;:&quot;arr&quot;}],[{&quot;id&quot;:&quot;98f8011f-9bb7-43ab-b5d9-94bb693f1e96&quot;,&quot;timestamp&quot;:&quot;2025-03-10 10:20:15&quot;,&quot;service&quot;:&quot;MidasPos Beta-Test&quot;,&quot;level&quot;:&quot;warning&quot;,&quot;message&quot;:&quot;Reversi\u00f3n de transacci\u00f3n solicitada&quot;,&quot;context&quot;:[{&quot;method&quot;:&quot;POST&quot;,&quot;url&quot;:&quot;api\/v1\/transactions\/reverse&quot;,&quot;input&quot;:[{&quot;transaction_id&quot;:&quot;1741548055203-8bdee9e6887a571c&quot;,&quot;reason&quot;:&quot;solicitud_cliente&quot;},{&quot;s&quot;:&quot;arr&quot;}],&quot;response&quot;:[{&quot;cod&quot;:&quot;00&quot;,&quot;message&quot;:&quot;Reversi\u00f3n exitosa&quot;},{&quot;s&quot;:&quot;arr&quot;}]},{&quot;s&quot;:&quot;arr&quot;}],&quot;received_at&quot;:&quot;2025-05-27 05:37:23&quot;},{&quot;s&quot;:&quot;arr&quot;}],[{&quot;id&quot;:&quot;dae427c2-cc55-4184-bc2e-6f6ec0675141&quot;,&quot;timestamp&quot;:&quot;2025-03-10 10:18:22&quot;,&quot;service&quot;:&quot;api5-prod01&quot;,&quot;level&quot;:&quot;error&quot;,&quot;message&quot;:&quot;Error en consulta de planes&quot;,&quot;context&quot;:[{&quot;method&quot;:&quot;POST&quot;,&quot;endpoint&quot;:&quot;api\/data\/get_plans&quot;,&quot;input&quot;:[{&quot;provider&quot;:&quot;movistar&quot;,&quot;subscription_number&quot;:&quot;8095551234&quot;},{&quot;s&quot;:&quot;arr&quot;}],&quot;error&quot;:[{&quot;cod&quot;:&quot;05&quot;,&quot;message&quot;:&quot;N\u00famero no encontrado&quot;},{&quot;s&quot;:&quot;arr&quot;}],&quot;response_time&quot;:&quot;1.45&quot;},{&quot;s&quot;:&quot;arr&quot;}],&quot;received_at&quot;:&quot;2025-05-27 05:37:23&quot;},{&quot;s&quot;:&quot;arr&quot;}],[{&quot;id&quot;:&quot;5c9f5d6e-c177-4654-9554-801482deec72&quot;,&quot;timestamp&quot;:&quot;2025-03-10 10:15:30&quot;,&quot;service&quot;:&quot;MidasPos Beta-Test&quot;,&quot;level&quot;:&quot;info&quot;,&quot;message&quot;:&quot;Transacci\u00f3n de recarga exitosa&quot;,&quot;context&quot;:[{&quot;method&quot;:&quot;POST&quot;,&quot;url&quot;:&quot;api\/v1\/transactions\/recharge&quot;,&quot;input&quot;:[{&quot;provider&quot;:&quot;claro&quot;,&quot;number&quot;:&quot;8299876285&quot;,&quot;amount&quot;:100},{&quot;s&quot;:&quot;arr&quot;}],&quot;response&quot;:[{&quot;cod&quot;:&quot;00&quot;,&quot;auth_code&quot;:&quot;49175584&quot;,&quot;transaction_id&quot;:&quot;1741548055203-8bdee9e6887a571c&quot;},{&quot;s&quot;:&quot;arr&quot;}]},{&quot;s&quot;:&quot;arr&quot;}],&quot;received_at&quot;:&quot;2025-05-27 05:37:23&quot;},{&quot;s&quot;:&quot;arr&quot;}],[{&quot;id&quot;:&quot;68354d975a975&quot;,&quot;timestamp&quot;:&quot;2025-05-27 05:28:55&quot;,&quot;service&quot;:&quot;Unknown&quot;,&quot;level&quot;:&quot;info&quot;,&quot;message&quot;:&quot;&quot;,&quot;context&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;received_at&quot;:&quot;2025-05-27 05:28:55&quot;},{&quot;s&quot;:&quot;arr&quot;}],[{&quot;id&quot;:&quot;68354d471edc6&quot;,&quot;timestamp&quot;:&quot;2025-05-27 05:27:35&quot;,&quot;service&quot;:&quot;Unknown&quot;,&quot;level&quot;:&quot;info&quot;,&quot;message&quot;:&quot;&quot;,&quot;context&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;received_at&quot;:&quot;2025-05-27 05:27:35&quot;},{&quot;s&quot;:&quot;arr&quot;}],[{&quot;id&quot;:&quot;68354c84275a9&quot;,&quot;timestamp&quot;:&quot;2025-05-27 05:24:20&quot;,&quot;service&quot;:&quot;Unknown&quot;,&quot;level&quot;:&quot;info&quot;,&quot;message&quot;:&quot;&quot;,&quot;context&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;received_at&quot;:&quot;2025-05-27 05:24:20&quot;},{&quot;s&quot;:&quot;arr&quot;}],[{&quot;id&quot;:&quot;68353fcf7ec57&quot;,&quot;timestamp&quot;:&quot;2025-05-27 04:30:07&quot;,&quot;service&quot;:&quot;Unknown&quot;,&quot;level&quot;:&quot;info&quot;,&quot;message&quot;:&quot;&quot;,&quot;context&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;received_at&quot;:&quot;2025-05-27 04:30:07&quot;},{&quot;s&quot;:&quot;arr&quot;}],[{&quot;id&quot;:&quot;68353f2227386&quot;,&quot;timestamp&quot;:&quot;2025-05-27 04:27:14&quot;,&quot;service&quot;:&quot;Unknown&quot;,&quot;level&quot;:&quot;info&quot;,&quot;message&quot;:&quot;&quot;,&quot;context&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;received_at&quot;:&quot;2025-05-27 04:27:14&quot;},{&quot;s&quot;:&quot;arr&quot;}],[{&quot;id&quot;:&quot;68353ecc96c10&quot;,&quot;timestamp&quot;:&quot;2025-05-27 04:25:48&quot;,&quot;service&quot;:&quot;Unknown&quot;,&quot;level&quot;:&quot;info&quot;,&quot;message&quot;:&quot;&quot;,&quot;context&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;received_at&quot;:&quot;2025-05-27 04:25:48&quot;},{&quot;s&quot;:&quot;arr&quot;}],[{&quot;id&quot;:&quot;68353cf2e66cd&quot;,&quot;timestamp&quot;:&quot;2025-05-27 04:17:54&quot;,&quot;service&quot;:&quot;Unknown&quot;,&quot;level&quot;:&quot;info&quot;,&quot;message&quot;:&quot;&quot;,&quot;context&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;received_at&quot;:&quot;2025-05-27 04:17:54&quot;},{&quot;s&quot;:&quot;arr&quot;}]],{&quot;s&quot;:&quot;arr&quot;}],&quot;filters&quot;:[{&quot;level&quot;:&quot;&quot;,&quot;search&quot;:&quot;&quot;,&quot;service&quot;:&quot;&quot;},{&quot;s&quot;:&quot;arr&quot;}],&quot;isPlaying&quot;:true,&quot;activeLog&quot;:null},&quot;memo&quot;:{&quot;id&quot;:&quot;3qcVSe8RQRWsj8eOztOE&quot;,&quot;name&quot;:&quot;log-dashboard&quot;,&quot;path&quot;:&quot;dashboard&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;a7255b3340db412959a76e13784e6a77351a32af0210efe438bfb97b7b84751c&quot;}" wire:effects="{&quot;listeners&quot;:[&quot;logReceived&quot;]}" wire:id="3qcVSe8RQRWsj8eOztOE" class="flex flex-col h-full bg-gray-100 dark:bg-gray-900">
+    <!-- Contenedor principal -->
+    <div class="flex-1 relative overflow-hidden">
+        <div class="w-full h-full overflow-y-auto">
+            <div class="space-y-0.5">
+                <!--[if BLOCK]><![endif]-->                                        <div class="bg-black flex text-xs px-2 hover:bg-gray-900">
+                        <div class="w-[15px] font-mono text-gray-300">+</div>
+                        <div class="w-[30px] font-mono text-gray-300">Mar</div>
+                        <div class="w-[15px] mr-2 font-mono text-gray-300">10</div>
+                        <div class="w-[70px] font-mono text-gray-300">10:38:50</div>
+
+                        <div class="flex flex-wrap items-center text-gray-300 font-mono">
+                            <div class="mr-1 font-bold text-purple-400">CRITICAL</div>
+                            <div class="mr-2 text-table-blue">|api5-prod01|</div>
+                            <div class="mr-2 text-gray-500 ">Error de conexión a base de datos</div>
+                        </div>
+                    </div>
+                                                        <div class="bg-black flex text-xs px-2 hover:bg-gray-900">
+                        <div class="w-[15px] font-mono text-gray-300">+</div>
+                        <div class="w-[30px] font-mono text-gray-300">Mar</div>
+                        <div class="w-[15px] mr-2 font-mono text-gray-300">10</div>
+                        <div class="w-[70px] font-mono text-gray-300">10:36:05</div>
+
+                        <div class="flex flex-wrap items-center text-gray-300 font-mono">
+                            <div class="mr-1 font-bold text-table-green">INFO</div>
+                            <div class="mr-2 text-table-blue">|MidasPos Beta-Test|</div>
+                            <div class="mr-2 text-gray-500 ">Actualización de datos de comercio</div>
+                        </div>
+                    </div>
+                                                        <div class="bg-black flex text-xs px-2 hover:bg-gray-900">
+                        <div class="w-[15px] font-mono text-gray-300">+</div>
+                        <div class="w-[30px] font-mono text-gray-300">Mar</div>
+                        <div class="w-[15px] mr-2 font-mono text-gray-300">10</div>
+                        <div class="w-[70px] font-mono text-gray-300">10:33:20</div>
+
+                        <div class="flex flex-wrap items-center text-gray-300 font-mono">
+                            <div class="mr-1 font-bold text-table-green">INFO</div>
+                            <div class="mr-2 text-table-blue">|MidasPos Beta-Test|</div>
+                            <div class="mr-2 text-gray-500 ">Transacción reversible detectada</div>
+                        </div>
+                    </div>
+                                                        <div class="bg-black flex text-xs px-2 hover:bg-gray-900">
+                        <div class="w-[15px] font-mono text-gray-300">+</div>
+                        <div class="w-[30px] font-mono text-gray-300">Mar</div>
+                        <div class="w-[15px] mr-2 font-mono text-gray-300">10</div>
+                        <div class="w-[70px] font-mono text-gray-300">10:30:45</div>
+
+                        <div class="flex flex-wrap items-center text-gray-300 font-mono">
+                            <div class="mr-1 font-bold text-yellow-500">WARNING</div>
+                            <div class="mr-2 text-table-blue">|api5-prod01|</div>
+                            <div class="mr-2 text-gray-500 ">Límite de tasa excedido</div>
+                        </div>
+                    </div>
+                                                        <div class="bg-black flex text-xs px-2 hover:bg-gray-900">
+                        <div class="w-[15px] font-mono text-gray-300">+</div>
+                        <div class="w-[30px] font-mono text-gray-300">Mar</div>
+                        <div class="w-[15px] mr-2 font-mono text-gray-300">10</div>
+                        <div class="w-[70px] font-mono text-gray-300">10:28:12</div>
+
+                        <div class="flex flex-wrap items-center text-gray-300 font-mono">
+                            <div class="mr-1 font-bold text-table-green">INFO</div>
+                            <div class="mr-2 text-table-blue">|MidasPos Beta-Test|</div>
+                            <div class="mr-2 text-gray-500 ">Reimpresión de ticket solicitada</div>
+                        </div>
+                    </div>
+                                                        <div class="bg-black flex text-xs px-2 hover:bg-gray-900">
+                        <div class="w-[15px] font-mono text-gray-300">+</div>
+                        <div class="w-[30px] font-mono text-gray-300">Mar</div>
+                        <div class="w-[15px] mr-2 font-mono text-gray-300">10</div>
+                        <div class="w-[70px] font-mono text-gray-300">10:25:30</div>
+
+                        <div class="flex flex-wrap items-center text-gray-300 font-mono">
+                            <div class="mr-1 font-bold text-red-400">ERROR</div>
+                            <div class="mr-2 text-table-blue">|api5-prod01|</div>
+                            <div class="mr-2 text-gray-500 ">Autenticación fallida</div>
+                        </div>
+                    </div>
+                                                        <div class="bg-black flex text-xs px-2 hover:bg-gray-900">
+                        <div class="w-[15px] font-mono text-gray-300">+</div>
+                        <div class="w-[30px] font-mono text-gray-300">Mar</div>
+                        <div class="w-[15px] mr-2 font-mono text-gray-300">10</div>
+                        <div class="w-[70px] font-mono text-gray-300">10:22:45</div>
+
+                        <div class="flex flex-wrap items-center text-gray-300 font-mono">
+                            <div class="mr-1 font-bold text-table-green">INFO</div>
+                            <div class="mr-2 text-table-blue">|MidasPos Beta-Test|</div>
+                            <div class="mr-2 text-gray-500 ">Consulta de tickets ganadores</div>
+                        </div>
+                    </div>
+                                                        <div class="bg-black flex text-xs px-2 hover:bg-gray-900">
+                        <div class="w-[15px] font-mono text-gray-300">+</div>
+                        <div class="w-[30px] font-mono text-gray-300">Mar</div>
+                        <div class="w-[15px] mr-2 font-mono text-gray-300">10</div>
+                        <div class="w-[70px] font-mono text-gray-300">10:20:15</div>
+
+                        <div class="flex flex-wrap items-center text-gray-300 font-mono">
+                            <div class="mr-1 font-bold text-yellow-500">WARNING</div>
+                            <div class="mr-2 text-table-blue">|MidasPos Beta-Test|</div>
+                            <div class="mr-2 text-gray-500 ">Reversión de transacción solicitada</div>
+                        </div>
+                    </div>
+                                                        <div class="bg-black flex text-xs px-2 hover:bg-gray-900">
+                        <div class="w-[15px] font-mono text-gray-300">+</div>
+                        <div class="w-[30px] font-mono text-gray-300">Mar</div>
+                        <div class="w-[15px] mr-2 font-mono text-gray-300">10</div>
+                        <div class="w-[70px] font-mono text-gray-300">10:18:22</div>
+
+                        <div class="flex flex-wrap items-center text-gray-300 font-mono">
+                            <div class="mr-1 font-bold text-red-400">ERROR</div>
+                            <div class="mr-2 text-table-blue">|api5-prod01|</div>
+                            <div class="mr-2 text-gray-500 ">Error en consulta de planes</div>
+                        </div>
+                    </div>
+                                                        <div class="bg-black flex text-xs px-2 hover:bg-gray-900">
+                        <div class="w-[15px] font-mono text-gray-300">+</div>
+                        <div class="w-[30px] font-mono text-gray-300">Mar</div>
+                        <div class="w-[15px] mr-2 font-mono text-gray-300">10</div>
+                        <div class="w-[70px] font-mono text-gray-300">10:15:30</div>
+
+                        <div class="flex flex-wrap items-center text-gray-300 font-mono">
+                            <div class="mr-1 font-bold text-table-green">INFO</div>
+                            <div class="mr-2 text-table-blue">|MidasPos Beta-Test|</div>
+                            <div class="mr-2 text-gray-500 ">Transacción de recarga exitosa</div>
+                        </div>
+                    </div>
+                                                        <div class="bg-black flex text-xs px-2 hover:bg-gray-900">
+                        <div class="w-[15px] font-mono text-gray-300">+</div>
+                        <div class="w-[30px] font-mono text-gray-300">May</div>
+                        <div class="w-[15px] mr-2 font-mono text-gray-300">27</div>
+                        <div class="w-[70px] font-mono text-gray-300">05:28:55</div>
+
+                        <div class="flex flex-wrap items-center text-gray-300 font-mono">
+                            <div class="mr-1 font-bold text-table-green">INFO</div>
+                            <div class="mr-2 text-table-blue">|Unknown|</div>
+                            <div class="mr-2 text-gray-500 "></div>
+                        </div>
+                    </div>
+                                                        <div class="bg-black flex text-xs px-2 hover:bg-gray-900">
+                        <div class="w-[15px] font-mono text-gray-300">+</div>
+                        <div class="w-[30px] font-mono text-gray-300">May</div>
+                        <div class="w-[15px] mr-2 font-mono text-gray-300">27</div>
+                        <div class="w-[70px] font-mono text-gray-300">05:27:35</div>
+
+                        <div class="flex flex-wrap items-center text-gray-300 font-mono">
+                            <div class="mr-1 font-bold text-table-green">INFO</div>
+                            <div class="mr-2 text-table-blue">|Unknown|</div>
+                            <div class="mr-2 text-gray-500 "></div>
+                        </div>
+                    </div>
+                                                        <div class="bg-black flex text-xs px-2 hover:bg-gray-900">
+                        <div class="w-[15px] font-mono text-gray-300">+</div>
+                        <div class="w-[30px] font-mono text-gray-300">May</div>
+                        <div class="w-[15px] mr-2 font-mono text-gray-300">27</div>
+                        <div class="w-[70px] font-mono text-gray-300">05:24:20</div>
+
+                        <div class="flex flex-wrap items-center text-gray-300 font-mono">
+                            <div class="mr-1 font-bold text-table-green">INFO</div>
+                            <div class="mr-2 text-table-blue">|Unknown|</div>
+                            <div class="mr-2 text-gray-500 "></div>
+                        </div>
+                    </div>
+                                                        <div class="bg-black flex text-xs px-2 hover:bg-gray-900">
+                        <div class="w-[15px] font-mono text-gray-300">+</div>
+                        <div class="w-[30px] font-mono text-gray-300">May</div>
+                        <div class="w-[15px] mr-2 font-mono text-gray-300">27</div>
+                        <div class="w-[70px] font-mono text-gray-300">04:30:07</div>
+
+                        <div class="flex flex-wrap items-center text-gray-300 font-mono">
+                            <div class="mr-1 font-bold text-table-green">INFO</div>
+                            <div class="mr-2 text-table-blue">|Unknown|</div>
+                            <div class="mr-2 text-gray-500 "></div>
+                        </div>
+                    </div>
+                                                        <div class="bg-black flex text-xs px-2 hover:bg-gray-900">
+                        <div class="w-[15px] font-mono text-gray-300">+</div>
+                        <div class="w-[30px] font-mono text-gray-300">May</div>
+                        <div class="w-[15px] mr-2 font-mono text-gray-300">27</div>
+                        <div class="w-[70px] font-mono text-gray-300">04:27:14</div>
+
+                        <div class="flex flex-wrap items-center text-gray-300 font-mono">
+                            <div class="mr-1 font-bold text-table-green">INFO</div>
+                            <div class="mr-2 text-table-blue">|Unknown|</div>
+                            <div class="mr-2 text-gray-500 "></div>
+                        </div>
+                    </div>
+                                                        <div class="bg-black flex text-xs px-2 hover:bg-gray-900">
+                        <div class="w-[15px] font-mono text-gray-300">+</div>
+                        <div class="w-[30px] font-mono text-gray-300">May</div>
+                        <div class="w-[15px] mr-2 font-mono text-gray-300">27</div>
+                        <div class="w-[70px] font-mono text-gray-300">04:25:48</div>
+
+                        <div class="flex flex-wrap items-center text-gray-300 font-mono">
+                            <div class="mr-1 font-bold text-table-green">INFO</div>
+                            <div class="mr-2 text-table-blue">|Unknown|</div>
+                            <div class="mr-2 text-gray-500 "></div>
+                        </div>
+                    </div>
+                                                        <div class="bg-black flex text-xs px-2 hover:bg-gray-900">
+                        <div class="w-[15px] font-mono text-gray-300">+</div>
+                        <div class="w-[30px] font-mono text-gray-300">May</div>
+                        <div class="w-[15px] mr-2 font-mono text-gray-300">27</div>
+                        <div class="w-[70px] font-mono text-gray-300">04:17:54</div>
+
+                        <div class="flex flex-wrap items-center text-gray-300 font-mono">
+                            <div class="mr-1 font-bold text-table-green">INFO</div>
+                            <div class="mr-2 text-table-blue">|Unknown|</div>
+                            <div class="mr-2 text-gray-500 "></div>
+                        </div>
+                    </div>
+                <!--[if ENDBLOCK]><![endif]-->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer con controles -->
+    <div class="bg-gray-800 p-3 border-t border-gray-700">
+        <div class="flex items-center justify-between max-w-screen-xl mx-auto px-4">
+            <div class="text-sm text-gray-400">
+                <span></span> logs mostrados
+                <span>
+                    (de <span></span>)
+                </span>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <!-- Filtros -->
+                <select class="text-sm bg-gray-700 text-white rounded px-3 py-1">
+                    <option value="">Todos niveles</option>
+                    <option value="error">Error</option>
+                    <option value="warning">Warning</option>
+                    <option value="info">Info</option>
+                    <option value="critical">Critical</option>
+                </select>
+
+                <select class="text-sm bg-gray-700 text-white rounded px-3 py-1">
+                    <option value="">Todos servicios</option>
+                    <option value="MidasPos Beta-Test">MidasPos</option>
+                    <option value="api5-prod01">API Prod</option>
+                </select>
+
+                <input placeholder="Buscar..." class="text-sm bg-gray-700 text-white rounded px-3 py-1 w-64">
+
+                <button class="p-1 rounded text-white">
+                    <span>⏸</span>
+                    <span>▶</span>
+                </button>
+
+                <button class="text-sm bg-red-600 text-white rounded px-3 py-1 hover:bg-red-700">
+                    Limpiar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+                </main>
+            </div>
+        </div>
+        <!-- Livewire Scripts -->
+<script src="./Laravel_files/livewire.js" data-csrf="bAPBh7Ialca51AhogSdXulUtY8obYHNW6bEpld7v" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+    
+
+</body></html>

@@ -1,0 +1,32 @@
+@media (min-width: 320px) {
+
+    .logo {
+        height: 200px;
+        width: auto;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        gap: 2rem;
+        max-height: fit-content;
+    }
+    
+
+    .contact-info, .social-media, .legal-info {
+        flex: 1;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
+
+    .legal-info {
+        text-align: right;
+    }
+}
