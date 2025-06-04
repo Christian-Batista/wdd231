@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Cargar datos de miembros
     try {
         const response = await fetch('data/members.json');
-        console.log(response);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
