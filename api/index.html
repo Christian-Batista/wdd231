@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYUI Weather Data</title>
+    <!-- CSS -->
+     <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="styles/weather.css">
+    
+</head>
+<body>
+    <h1>OpenWeatherMap.org API Test</h1>
+    <main>
+        <!--  -->
+        <div class="weather-container">
+            <figure>
+                <img id="weather-icon" src="" alt="">
+            </figure>
+            <span id="current-temp"></span>
+            <p class="caption">Trier, Germany</p>
+            <figcaption></figcaption>
+            <div>
+                <!-- wind speed and humidity -->
+            <div class="weather-grid">
+                <div class="wind-speed">
+                    <img src="images/icons/ventoso.png" alt="">
+                    <p><span id="wind-speed"></span>Wind Speed</p>
+                </div>
+                <div class="weather-humidity">
+                    <img src="images/icons/lineas.png" alt="">
+                    <p><span id="humidity"></span>Humidity</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+    </main>
+    <footer>
+         Christian Batista | OpenWeatherMap.org | CC BY-SA 4.0
+    </footer>
+    <script  src="scripts/weather.js"></script>
+</body>
+</html>
+

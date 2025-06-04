@@ -1,0 +1,71 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #EEAECA;
+    background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#current-temp {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(220, 236, 251);
+    margin-top: 0;
+}
+
+#weather-icon {
+    width: 150px;
+    height: 150px;
+}
+.caption {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgb(199, 227, 252);
+}
+figcaption {
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgb(220, 237, 252);
+    margin: 0
+}
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+    margin-top: 5rem;
+}
+
+.weather-grid img {
+    width: 50px;
+    height: 50px;
+}
+
+.weather-grid p {
+    margin: 0;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+}
