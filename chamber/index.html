@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chamber of Commerce Directory - La Vega, Dominican Republic">
+    <meta name="author" content="Christian Batista">
+    <title>La Vega Chamber of Commerce</title>
+
+    <!-- Open Graph Meta Tags for Facebook  -->
+    <meta property="og:url" content="https://christian-batista.github.io/wdd231/chamber/index.html">
+    <meta property="og:title" content="Chamber of Commerce | Promoving Business Growth and Networking">
+    <meta property="og:description" content="Join our local Chamber of Commerce to foster business growth, networking, and community development. Discover member benefits and local events.">
+    <meta property="og:image" content="https://christian-batista.github.io/wdd231/chamber/images/icons/application-logo.png">
+
+    <!-- favicon -->
+    <link rel="icon" href="images/icons/favicon.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/base-medium.css">
+    <link rel="stylesheet" href="styles/base-large.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/home-medium.css">
+    <link rel="stylesheet" href="styles/home-large.css">
+
+    <!-- JavaScript -->
+     <script src="scripts/getWeather.js" defer></script>
+     <script src="scripts/spotlight.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="hero-container">
+                <img src="images/icons/application-logo.png" alt="Chamber of Commerce la Vega" class="logo">
+            </div>
+            <div class="nav-container">
+                <button class="hamburger-btn">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Discover</a></li>
+                        <li><a href="#">Bussiness Directory</a></li>
+                        <li><a href="#">Join</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- image hero here, have to be scalable and responsive -->
+        <section class="hero">
+            <h2>Welcome to the Chamber of Commerce</h2>
+            <img 
+                src="images/la-vega-landscape.jpg" 
+                alt="Beautiful landscape of La Vega" 
+                class="hero-image"
+            >
+            <button class="hero-btn">Keynote Tickets</button>
+        </section>
+        <!-- Main Content Section-->
+        <section class="card-section">
+            <h1>Home</h1>
+            <div class="cards-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <h3>Events</h3>
+                    <div class="card-content">
+                        
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <h3>Current Weather</h3>
+                    <div id="current-weather" class="card-content weather-flex">
+                        <div class="weather-icon">
+                        
+                        </div>
+                        <div class="weather-info">
+                            <p><strong id="current-temp"></strong> F</p>
+                            <p id="description"></p>
+                            <p>High: <span id="high-temp"></span></p>
+                            <p>Low: <span id="low-temp"></span></p>
+                            <p>Humidity: <span id="humidity"></span></p>
+                            <p>Sunrise: <span id="sunrise"></span>am</p>
+                            <p>Sunset: <span id="sunset"></span>pm</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <h3>Weather Forecast</h3>
+                    <div id="weather-forecast" class="card-content weather-forecast">
+                        <p id="today"><span></span></p>
+                        <p id="tomorrow"><span></span></p>
+                        <p id="day-after"><span></span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bussiness Spotlight Section -->
+         <section class="business-spotlight-container">
+            <H2 class="spotlight-title">Business Spotlight</H2>
+         </section>
+    </main>
+    <footer>
+        <div class="contact-info">
+            <h3>La Vega Chamber of Commerce</h3>
+            <p>Ave Peralta Michel #2<br>
+            <p>La Vega, DOM</p>
+            <p>info@lavegacommerce.com<br>
+            <p>(809) 555-2300</p>
+        </div>
+    
+        <div class="social-media">
+            <img src="images/icons/youtube.png" alt="Link to YouTube" >
+            <img src="images/icons/twitter.png" alt="Link to Twitter">
+            <img src="images/icons/linkedin.png" alt="Link to LinkedIn">
+        </div>
+    
+        <div class="footer-section legal-info">
+            <p>WDD231 Class Project</p>
+            <p>Christian Batista</p>
+            <p>&copy; <span id="currentYear"></span> La Vega Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

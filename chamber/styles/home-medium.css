@@ -1,0 +1,40 @@
+/* Mobile adjustments */
+@media (min-width: 480px) {
+    .hero {
+        max-height: 60vh;
+    }
+    .hero-btn {
+        font-size: 1rem;
+        padding: 10px 10px;
+        bottom: 30px;
+        right: 30px;
+        font-weight: bolder;
+    }
+
+    .card-section h1 {
+        margin-left: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+/* Desktop Styles - home-large.css */
+@media (min-width: 768px) {
+    .cards-container {
+        flex-direction: row;
+        padding: 2rem;
+    }
+    
+    .card {
+        width: calc(33.33% - 1.33rem);
+        min-height: 280px;
+    }
+    
+    .card-section h1 {
+        margin-left: 2rem;
+        font-size: 2rem;
+    }
+
+    .weather-flex {
+        justify-content: center;
+    }
+}

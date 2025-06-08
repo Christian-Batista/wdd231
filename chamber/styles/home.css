@@ -1,0 +1,208 @@
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    max-height: 30vh;
+    overflow: hidden;
+}
+
+.hero h2 {
+    display: none;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding: 10px 10px;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    background-color: var(--secondary-color);
+    color: var(--neutro-color);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* Card Section */
+card-section h1 {
+    font-weight: 700;
+    text-align: left;
+    margin: 0 0 1.5rem 1rem;
+    padding-left: 1rem;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem
+}
+/* individual cards */
+.card {
+    background-color:var(--background-color);
+    width: 100%;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0.5rem;
+}
+
+.card h3 {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.3rem;
+    background-color: var(--neutro-color);
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    padding: 0 1.5rem 1.5rem;
+
+}
+
+/* Weather css */
+.weather-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    height: 100%;
+    margin-top: 20px;
+}
+.loading-weather {
+  display: none;
+}
+
+/* Cuando JavaScript cargue la imagen */
+.loading-weather.loaded {
+  display: block;
+}   
+
+.weather-icon img {
+    width: 100px;
+    height: 100px;
+
+}
+
+.weather-info p {
+    margin: 0.2em 0;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* spotlight.css */
+.business-spotlight-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.business-spotlight-card {
+    background: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.business-spotlight-card:hover {
+    transform: translateY(-0.25rem);
+}
+
+.business-header {
+    padding: 1.25rem;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+.business-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #2c3e50;
+}
+
+.spotlight-title {
+    display: none;
+}
+
+.tagline {
+    margin: 0.5rem 0 0;
+    color: var(--text-colorß);
+    font-size: 0.875rem;
+}
+
+.divider {
+    height: 1px;
+    background: #ecf0f1;
+    margin: 1rem 0;
+}
+
+.business-content {
+    display: flex;
+    padding: 1.25rem;
+}
+
+.business-image {
+    flex: 0 0 30%;
+    padding-right: 1rem;
+}
+
+.business-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.business-info {
+    flex: 1;
+    font-size: 0.875rem;
+}
+
+.business-info p {
+    margin: 0.5rem 0;
+}
+
+.business-info a {
+    color: #070a0b;
+    word-break: break-word;
+}
+
+.business-info a:hover {
+    color: var(--secondary-color);
+}
+
+.membership-badge {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: white;
+}
+
+.basic-member { background-color: #95a5a6; }
+.silver-member { background-color: #bdc3c7; color: #2c3e50; }
+.gold-member { background-color: #f1c40f; color: #2c3e50; }

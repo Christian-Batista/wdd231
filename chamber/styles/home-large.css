@@ -1,0 +1,30 @@
+/* Mobile adjustments */
+@media (min-width: 1024px) {
+    .card-section,
+    .bussiness-spotlight-container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    .hero {
+        width: calc(100% - 4rem);
+        max-width: 1400px;
+        margin: 0 auto;
+
+    }
+    .hero-image {
+        width: 100%;
+        height: auto;
+        max-height: 90vh;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .hero-btn {
+        bottom: 40px;
+        right: 40px;
+    }
+
+    .card {
+        min-height: 250px;
+    }
+}
